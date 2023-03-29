@@ -1,0 +1,332 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 22, 2022, 5:27:06 PM
+    Author     : Ravindu
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --main-color: #DD2F6E;
+    --color-dark: #1D2231;
+    --text--gray: #8390A2;
+}
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   list-style-type: none;
+   text-decoration: none;
+   font-family: 'Poppins', sans-serif;
+}
+
+.sidebar {
+    width: 345px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: darkcyan;
+    z-index: 100;
+    transition: width 300ms;
+}
+
+.sidebar-brand {
+    height: 90px;
+    padding: 1rem 0rem 2rem;
+    color: #fff;
+}
+
+.sidebar-brand span {
+    display: inline-block;
+    padding-right: 1rem;
+}
+
+.sidebar-menu {
+    margin-top: 1rem;
+
+}
+
+.sidebar-menu li {
+    width: 100%;
+    margin-bottom: 1.7rem;
+    padding-left: 2rem;
+}
+
+.sidebar-menu a {
+    padding-left: 1rem;
+    display: block;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.sidebar-menu a.Active {
+    background: #fff;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: var(--main-color);
+    border-radius: 30px 0px 0px 30px;
+}
+
+.sidebar-menu a span:first-child {
+    font-size: 1.5rem;
+    padding-right: 1rem;
+}
+
+#nav-toggle:checked + .sidebar {
+    width: 70px;
+}
+
+#nav-toggle:checked + .sidebar .sidebar-brand h2 span:last-child,
+#nav-toggle:checked + .sidebar li {
+    padding-left: 1rem;
+    text-align: center;
+}
+
+#nav-toggle:checked + .sidebar li a{
+    padding-left: 0rem;
+}
+
+#nav-toggle:checked + .sidebar .sidebar-brand h2 span:last-child,
+#nav-toggle:checked + .sidebar li a span:last-child{ 
+    display: none;
+}
+
+#nav-toggle:checked ~ .main-content {
+    margin-left: 70px;
+}
+
+#nav-toggle:checked ~ .main-content header {
+    width: calc(100% - 70px);
+    left: 70px;
+}
+
+.main-content { 
+    transition: margin-left 300ms;
+    margin-left: 345px;
+
+}
+
+header {
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+    position: fixed;
+    left: 345px;
+    width: calc(100% - 345px);
+    top: 0;
+    z-index: 100;
+    transition: left 300ms;
+}
+
+#nav-toggle {
+     display: none;
+}
+
+header h2 {
+    color: #222;
+}
+
+header label span {
+    font-size: 1.7rem;
+    padding-right: 1rem;
+}
+
+
+.search-wrapper {
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden ;
+}
+
+.search-wrapper span {
+    display: inline-block;
+    padding: 0 rem 1rem;
+    font-size: 1.5rem;
+}
+
+.search-wrapper input {
+    height: 100%;
+    padding: .5rem;
+    border: navy;
+    outline: navy;
+}
+
+.user-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.user-wrapper image {
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.user-wrapper small {
+    display: inline-block;
+    color: #00FF00;
+}
+
+/* Campaign section*/    
+.Campaign-bottom {
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40PX;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    margin-top: 1rem;
+}
+
+.Campaign-card{
+    flex-basis: 80%;
+    display: grid ;
+    justify-content: center;
+    flex-direction: row;
+    padding: 30px;
+    border-radius: 10px;    
+    background-size: cover;
+    margin: 10px 0%;
+    cursor: pointer;
+    transition: transform 0.7s;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    
+    
+}
+
+.Campaign-card:hover{
+    transform: translateY(-5px);
+    }
+
+.Campaign-card::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .8;
+    z-index: -1;
+}
+
+.Campaign-card h4 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    color:midnightblue;
+}
+
+.Campaign-card span {
+    font-size: 1.6rem;
+    margin-bottom: 2px;
+    color: coral;
+}
+
+  main {
+    margin-top: 85px;
+    padding: 2rem 1.5rem;
+    background: #f1f5f9;
+    min-height: calc(100vh - 90px);
+  }
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+}
+    /*End Campaign section*/
+
+    /*FLIGHT section*/
+
+.recent-grid {
+    margin-top: 3rem;
+    display: grid;
+    grid-gap:2rem
+    grid-template-rows 55% auto;
+    
+}
+
+.card {
+    background: #fff;
+    border-radius: 5px;
+}
+
+.card-header,
+.card-body {
+    padding: 1rem;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+
+}
+
+.card-header button {
+    background: cornflowerblue;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 0.8rem;
+    padding: 0.5rem 5rem;
+    border: 2px solid var(--text--gray);
+    
+}
+
+.card-body Button {
+    background: cornflowerblue;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--text--gray);
+}
+
+table {
+    border-collapse: collapse;
+}
+
+thead tr {
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+thead td {
+    font-weight: 700;
+}
+
+td {
+    padding: .5rem 1rem;
+    font-size: .8rem;
+    color: #222;
+}
+
+td .STATUS {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+tr td:last-child{
+    display: flex;
+    align-items: center;
+}
+
+

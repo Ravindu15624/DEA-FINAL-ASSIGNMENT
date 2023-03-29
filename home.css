@@ -1,0 +1,276 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 21, 2022, 7:49:38 PM
+    Author     : Ravindu
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Montserat:500');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Ubuntu:wght@700&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.sec {
+    background-image:url("../images/home1.jpg");
+    height:120vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:grid;
+    justify-items: center;
+    align-items: center;
+}
+
+
+/*============Navigation Bar===============*/
+
+header {
+   position:fixed;
+   top:0;
+   z-index: 1;
+   width:100%;
+   background-color: rgba(0,0,0,0.404);
+
+}
+
+.container1
+{
+    width:1280px;
+    margin:auto;
+}
+<!--
+.navcheckbox
+{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding:0px 0px;
+}
+
+.logo {
+    /*
+   text-decoration: none;
+   color:white;
+   padding-left:10px;
+   padding-top:15px;
+   font-size: 30px;*/
+}
+.phenx {
+    padding: 5px 2px;
+    padding-left: 15%;
+}
+
+.phenx small{
+
+    color: floralwhite;
+    display: inline-block;
+    font-size: 15px;
+    padding-left: 5px ;
+    padding-right: 2px;
+}
+.phenx h2 {
+
+    color: floralwhite;
+    text-align: center;
+   font-size: 40px;
+   display: inline-block;
+}
+.tabnav
+{
+    outline: none;
+    display:none;
+
+}
+
+.label
+{
+    display:none;
+    color:white;
+}
+
+.burger
+{
+    width:35px;
+    height:5px;
+    background-color: white;
+    margin-top: 5px;
+}
+
+.contentnav
+{
+    grid-column: 3;
+    list-style:none;
+    margin:0;
+    padding:0;
+
+}
+
+.contentnav li
+{
+    display:inline-block;
+    padding-right: 30px;
+}
+
+.contentnav li a
+{
+    text-decoration: none;
+    color:white;
+    position: relative;
+    font-size: 20px;
+}
+
+.row a
+{
+    text-decoration: none;
+}
+
+.contentnav li a::after
+{
+    content:'';
+    display:block;
+    height:2px;
+    background-color: white;
+    position: absolute;
+    left:0;
+    right:0;
+    transform-origin: right;
+    transform:scale(0,1);
+    transition:transform ease-in-out 0.5s;
+
+}
+
+.contentnav li a:hover::after
+{
+    transform:scale(1,1);
+}
+
+i
+{   color:white;
+    font-family:'poppins',sans-serif;
+    font-size: 10px;
+
+    
+}
+/*===============navigation end=================*/
+
+/*three*/
+
+
+.three img {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/* des */
+
+.pic {
+    width: 80%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.pic h1 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.row {
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+
+.row img {
+    padding-bottom: 10px;
+    width: 650px;
+}
+
+.pic-column {
+    flex-basis: 40%;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    margin-bottom: 0%;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.pic h2 {
+    font-weight: 600;
+    font-size: 34px;
+    font-weight: 600;
+    color:white;
+}
+
+.pic-column:hover {
+    box-shadow: 0 0 50px 0px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+
+
+/* footer area */
+
+
+/*==================Header Responsive==========================*/
+@media screen and (max-width:1280px)
+{
+    .container1
+    {
+        width:100%;
+    }
+}
+
+@media screen and (max-width:770px)
+{
+    .label
+    {
+       display:grid;
+       cursor: pointer;
+       grid-column: 3;
+       padding-right: 10px;
+
+    }
+
+    .contentnav
+    {
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-column: 1/4;
+        text-align:center;
+        max-height: 0;
+        overflow:hidden;
+        transition:all ease-in-out 0.6s
+
+    }
+
+    .navcheckbox input:checked ~ .contentnav
+    {
+        max-width:500px;
+
+    }
+
+    .contentnav li
+    {
+        padding:15px 0px;
+    }
+
+
+}
+

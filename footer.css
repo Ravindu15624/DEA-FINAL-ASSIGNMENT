@@ -1,0 +1,151 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 22, 2022, 11:51:23 PM
+    Author     : Ravindu
+*/
+
+footer{
+
+    bottom:0px;
+    width:100%;
+    background:rgb(69, 69, 69);
+    color:#c2cbcb;
+    font-family: 'poppins',sans-serif;
+
+
+}
+.main-content{
+    display: flex;
+}
+.main-content .box{
+    flex-basis: 50%;
+    padding: 10px 20px;
+}
+.box h2{
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color:white;
+
+}
+.box .content{
+    margin: 20px 0 0 0;
+
+}
+.left .content p{
+    text-align: justify;
+}
+.left .content .social{
+    margin: 20px 0 0 0;
+
+}
+.left .content .social a{
+    padding: 0 2px;
+}
+.left .content .social a span{
+    height: 40px;
+    width: 40px;
+    background: #111;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+    color:white;
+
+
+}
+.left .content .social a span:hover{
+    background:#3498db;
+    
+}
+.center .content .fa{
+    font-size: 1.4375rem;
+    background: #1a1a1a;
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+    color:white;
+
+}
+.center .content .fa:hover{
+    background: #3498db;
+
+
+}
+.center .content .text{
+    font-size: 1.0625rem;
+    font-weight: 500;
+    padding-left: 10px;
+}
+.center .content .phone{
+    margin: 10px 0;
+
+
+
+
+}
+.right form .text{
+    font-size: 1.0625rem;
+    margin-bottom: 2px;
+    color:#cfcbcb;
+
+
+
+}
+.right form .msg{
+    margin-top:10px;
+
+
+}
+.right form input, .right form textarea{
+    width: 100%;
+    font-size: 1.0625rem;
+    background: #151515;
+    color:white;
+    padding-left: 10px;
+    border: 1px solid #222222;
+
+   
+}
+.right form input:focus,
+.right form textarea:focus{
+    outline-color:#3498db;
+}
+.right form input{
+    height: 35px;
+    
+}
+.right form .btn button{
+    
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: rgb(99, 96, 96);
+    font-size: 1.0625rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+
+
+
+}
+.right form .btn button:hover{
+    
+    background: #3498db;
+}
+
+
+
+
+
+
